@@ -17,3 +17,4 @@ comment = *"comment text"*
 | --- | --- |
 | [@chrisdburr](https://github.com/chrisdburr) *Instructor* | *"It's been a real pleasure putting this course together, and I'm looking forward to speaking with everyone."* |
 | [@ejmoss](https://github.com/ejmoss) | *"Amazing! I have thoroughly enjoyed this course, discussed with and learnt from everyone involved, and I am looking forward to what is to come - for the remainder of the course and beyond."* |
+| [@aragn](https://github.com/aragn) | *"Great course. I look forward to joining more workshops and activities offered by the Alan Turing Institute."* |
