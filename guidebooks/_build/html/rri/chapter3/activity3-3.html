@@ -40,6 +40,8 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/api.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -71,6 +73,11 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Turing Commons</h1>
@@ -121,7 +128,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter2/history.html">
-     A Short History of RRI
+     Understanding RRI
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,6 +359,11 @@
      Generating a Synthetic Healthcare Dataset
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../further_resources/participants.html">
+     Course Participants
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -494,10 +506,16 @@
 <li><p>You may find that a bias is relevant for multiple stages. This should be expected. However, if so, place it at the highest point upstream that you believe it is best to consider. Don’t be tempted to just place them all at the project planning stage though. While it is good to anticipate bias at the earliest possible opportunity, it is also important to ensure that reflection and action is properly contextualised.</p></li>
 <li><p>You have not yet looked at each of the activities for the project lifecycle in detail, so your understanding of the different activities will be limited. This is intentional. After covering the material in <a class="reference internal" href="../chapter4/index.html"><span class="doc std std-doc">Chapter 4</span></a>, you will return to this activity and have the opportunity to see whether your initial answers should be changed.</p></li>
 </ol>
-<div class="admonition-summary admonition">
-<p class="admonition-title">Summary</p>
-<p>If you are doing this as part of an instructor-led version of the course, you will be given a link to an interactive Mural board to support this activity.</p>
+<div class="admonition-mural admonition">
+<p class="admonition-title">Mural</p>
+<p>If you are doing this as part of an instructor-led version of the course, you will be given a specific link to an interactive Mural board to support this activity. Otherwise, feel free to use the following template to create your own.</p>
 </div>
+<iframe src='https://app.mural.co/embed/739222d7-9987-46fc-87ee-b6c5c1e07362'
+        width='100%'
+        height='480px'
+        style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef'
+        sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'>
+</iframe>
 <!---
 
 Activity 4: Bias Cards

@@ -40,6 +40,8 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/api.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -51,7 +53,7 @@
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="About this Guidebook" href="../../../pcs/index.html" />
+    <link rel="next" title="Course Participants" href="../../further_resources/participants.html" />
     <link rel="prev" title="Further Reading" href="../../further_resources/further-reading.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -71,6 +73,11 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Turing Commons</h1>
@@ -121,7 +128,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../chapter2/history.html">
-     A Short History of RRI
+     Understanding RRI
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,6 +359,11 @@
      Generating a Synthetic Healthcare Dataset
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../further_resources/participants.html">
+     Course Participants
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -472,7 +484,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/chrisdburr/turing-commons/master?urlpath=tree/guidebooks/rri/chapter4/project_design/synthetic_data_generation.ipynb"><button type="button"
+        <a class="binder-button" href="https://hub-binder.mybinder.ovh/user/chrisdburr-turing-commons-ntm7m74q/lab/v2/gh/chrisdburr/turing-commons/master?urlpath=lab/tree/guidebooks/rri/chapter4/project_design/synthetic_data_generation.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../../_static/images/logo_binder.svg"
@@ -590,30 +602,8 @@ The dataset is used in <a class="reference internal" href="../index.html"><span 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting odfpy
-  Using cached odfpy-1.4.1.tar.gz (717 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: defusedxml in /Users/cburr/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages (from odfpy) (0.7.1)
-Building wheels for collected packages: odfpy
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for odfpy (setup.py) ... ?25l-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for odfpy: filename=odfpy-1.4.1-py2.py3-none-any.whl size=137339 sha256=1a486f2a8de80312e7bd2e9b7cb59c6f4a9424d6a2d563c91f5d617278538213
-  Stored in directory: /Users/cburr/Library/Caches/pip/wheels/20/ff/69/1b3f423ffe400b87afa368c70b43d2b5cd3bfb9ac8a613ba5b
-Successfully built odfpy
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: odfpy
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed odfpy-1.4.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: odfpy in /Users/cburr/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages (1.4.1)
+Requirement already satisfied: defusedxml in /Users/cburr/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages (from odfpy) (0.7.1)
 </pre></div>
 </div>
 </div>
@@ -855,7 +845,7 @@ Successfully built odfpy
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  0.,   0.,  68.,  71.,  84.,  61.,  50.,  66., 155.,   0.]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  0.,   0.,  50.,  73.,  76.,  95.,  58.,  52., 141.,   0.]),
  array([  0.,  10.,  20.,  30.,  40.,  50.,  60.,  70.,  80.,  90., 100.]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
@@ -1038,7 +1028,7 @@ Here we have a bit more work to do.  For the moment, we don’t care about the d
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/_l/l9rdg7gs4kx5gglxn_1y0wn00000gq/T/ipykernel_51766/880005673.py:3: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/_l/l9rdg7gs4kx5gglxn_1y0wn00000gq/T/ipykernel_53719/880005673.py:3: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   df_hospital_admissions[&quot;sum&quot;] = df_hospital_admissions.sum(axis=1)
 </pre></div>
 </div>
@@ -1511,7 +1501,10 @@ For height, we assume a linear relation between average height and age from the 
     <span class="n">avg_bmi_min</span> <span class="o">=</span> <span class="mi">23</span>
     <span class="n">avg_bmi</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="mi">60</span><span class="o">-</span><span class="n">age</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">avg_bmi_max</span><span class="o">-</span><span class="n">avg_bmi_min</span><span class="p">)</span><span class="o">/</span><span class="mi">60</span> <span class="o">+</span> <span class="n">avg_bmi_min</span>
     <span class="n">std_bmi</span> <span class="o">=</span> <span class="mf">6.1</span> <span class="k">if</span> <span class="n">sex</span><span class="o">==</span><span class="s2">&quot;F&quot;</span> <span class="k">else</span> <span class="mf">4.7</span>
-    <span class="n">bmi</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="n">avg_bmi</span><span class="p">,</span> <span class="n">std_bmi</span><span class="p">)</span>
+    <span class="c1"># truncated Gaussian - it doesn&#39;t make sense to have BMI &lt; 13 or &gt; 50</span>
+    <span class="n">bmi</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">bmi</span> <span class="o">&lt;</span> <span class="mf">13.5</span> <span class="ow">or</span> <span class="n">bmi</span> <span class="o">&gt;</span> <span class="mf">50.</span><span class="p">):</span>
+        <span class="n">bmi</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="n">avg_bmi</span><span class="p">,</span> <span class="n">std_bmi</span><span class="p">)</span>
     <span class="c1"># calculate weight from height and bmi</span>
     <span class="n">weight</span> <span class="o">=</span> <span class="n">bmi</span> <span class="o">*</span> <span class="n">height</span><span class="o">*</span><span class="n">height</span>
     <span class="k">return</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span>
@@ -1530,7 +1523,7 @@ We will start from a small baseline probability, and increase this based on seve
 <li><p>BMI - having a BMI over 30 increases the chance of dying</p></li>
 <li><p>Sex - Men have a higher chance of dying of COVID than women</p></li>
 <li><p>Ethnicity - People of Chinese, Indian, Pakistani, Other Asian, Black Caribbean and Other Black ethnicity had between 10 and 50% higher risk of death when compared to White British - the numbers used here are based on table A1 in <a class="reference external" href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/908434/Disparities_in_the_risk_and_outcomes_of_COVID_August_2020_update.pdf">the PHE document</a></p></li>
-<li><p>We also make some ad-hoc assumptions regarding whether the patient was hospitalised and had intrusive ventilation.   In general we assume that the most seriously ill patients were admitted, and given critical care, and these were most likely to die.  However, we don’t enforce this relation for patients over 75, who were perhaps more likely to be in care homes.</p></li>
+<li><p>We also make some ad-hoc assumptions regarding whether the patient was hospitalised and had intrusive ventilation.   In general we assume that the most seriously ill patients were admitted, and given critical care, and these were most likely to die.</p></li>
 </ul>
 <ul class="simple">
 <li><p>For those that were admitted, we apply a small correction to account for the fact that the knowledge in hospitals improved over time - we say 1% relative per day after 15th April</p></li>
@@ -1561,22 +1554,23 @@ We will start from a small baseline probability, and increase this based on seve
         <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="n">bmi_factor</span>
     <span class="c1"># modify for ethnicity</span>
     <span class="k">if</span> <span class="n">ethnicity</span> <span class="o">==</span> <span class="s2">&quot;Asian / Asian British&quot;</span><span class="p">:</span>
-        <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="mf">1.35</span>
+        <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="mf">1.36</span>
     <span class="k">elif</span> <span class="n">ethnicity</span> <span class="o">==</span> <span class="s2">&quot;Black / Black British&quot;</span><span class="p">:</span>
-        <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="mf">1.2</span>
+        <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="mf">1.22</span>
     <span class="k">elif</span> <span class="n">ethnicity</span> <span class="o">==</span> <span class="s2">&quot;Mixed / Multiple ethnic groups&quot;</span><span class="p">:</span>
-        <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="mf">1.1</span>
+        <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="mf">1.12</span>
     <span class="k">elif</span> <span class="n">ethnicity</span> <span class="o">==</span> <span class="s2">&quot;Other ethnic groups&quot;</span><span class="p">:</span>
-        <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="mf">1.02</span>
+        <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span> <span class="o">*</span> <span class="mf">1.04</span>
     <span class="c1"># ad-hoc corrections for whether the patient was </span>
     <span class="c1"># hospitalised, and given ventilation</span>
-    <span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">75</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">admitted</span><span class="p">:</span>
-            <span class="n">prob</span> <span class="o">*=</span> <span class="mi">2</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">prob</span> <span class="o">*=</span> <span class="mf">0.5</span>
+
+    <span class="k">if</span> <span class="n">admitted</span><span class="p">:</span>
+        <span class="n">prob</span> <span class="o">*=</span> <span class="mi">2</span>
         <span class="k">if</span> <span class="n">ventilation</span><span class="p">:</span> <span class="c1"># double the risk again</span>
             <span class="n">prob</span> <span class="o">*=</span> <span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">prob</span> <span class="o">*=</span> <span class="mf">0.65</span>
+
     <span class="c1"># if patient was admitted, account for the fact that care improved after some date</span>
     <span class="k">if</span> <span class="n">admitted</span><span class="p">:</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">admission_date</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
@@ -1586,7 +1580,6 @@ We will start from a small baseline probability, and increase this based on seve
             <span class="n">prob</span> <span class="o">=</span> <span class="n">prob</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">t</span><span class="o">*</span><span class="mf">0.01</span><span class="p">)</span>
     <span class="c1"># now lets see whether random number 0&lt;x&lt;1 is below prob</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
-<span class="c1">#    return prob</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">prob</span>
     
 </pre></div>
@@ -1633,7 +1626,7 @@ We will start from a small baseline probability, and increase this based on seve
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">people</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30000</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50000</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Generating&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
     <span class="n">people</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
@@ -1685,26 +1678,26 @@ We will start from a small baseline probability, and increase this based on seve
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_l</span><span class="o">/</span><span class="n">l9rdg7gs4kx5gglxn_1y0wn00000gq</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_51766</span><span class="o">/</span><span class="mf">2003220613.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_l</span><span class="o">/</span><span class="n">l9rdg7gs4kx5gglxn_1y0wn00000gq</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53719</span><span class="o">/</span><span class="mf">3570010159.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Generating&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">people</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
 <span class="ne">----&gt; </span><span class="mi">6</span>         <span class="n">generate_person</span><span class="p">(</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span>             <span class="n">df_cases_age_sex</span><span class="p">,</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>             <span class="n">df_ethnicity_summary</span><span class="p">,</span>
 
-<span class="nn">/var/folders/_l/l9rdg7gs4kx5gglxn_1y0wn00000gq/T/ipykernel_51766/3597934511.py</span> in <span class="ni">generate_person</span><span class="nt">(df_age_sex, df_ethnicity, df_admission, df_care)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">nhs_id</span> <span class="o">=</span> <span class="n">get_nhs_id</span><span class="p">()</span>
+<span class="nn">/var/folders/_l/l9rdg7gs4kx5gglxn_1y0wn00000gq/T/ipykernel_53719/3597934511.py</span> in <span class="ni">generate_person</span><span class="nt">(df_age_sex, df_ethnicity, df_admission, df_care)</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">sex</span> <span class="o">=</span> <span class="n">get_sex</span><span class="p">(</span><span class="n">df_age_sex</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">age</span> <span class="o">=</span> <span class="n">get_age</span><span class="p">(</span><span class="n">df_age_sex</span><span class="p">,</span> <span class="n">sex</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">ethnicity</span> <span class="o">=</span> <span class="n">get_ethnicity</span><span class="p">(</span><span class="n">df_ethnicity</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">age</span> <span class="o">=</span> <span class="n">get_age</span><span class="p">(</span><span class="n">df_age_sex</span><span class="p">,</span> <span class="n">sex</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">ethnicity</span> <span class="o">=</span> <span class="n">get_ethnicity</span><span class="p">(</span><span class="n">df_ethnicity</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">admitted</span><span class="p">,</span> <span class="n">admission_date</span><span class="p">,</span> <span class="n">ventilated</span> <span class="o">=</span> <span class="n">get_hospital_data</span><span class="p">(</span><span class="n">df_admission</span><span class="p">,</span> <span class="n">df_care</span><span class="p">,</span> <span class="n">ethnicity</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">height</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">get_height_weight</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">sex</span><span class="p">)</span>
 
-<span class="nn">/var/folders/_l/l9rdg7gs4kx5gglxn_1y0wn00000gq/T/ipykernel_51766/3977429443.py</span> in <span class="ni">get_age</span><span class="nt">(df, sex)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">column_name</span><span class="p">]:</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>             <span class="k">break</span>
-<span class="ne">---&gt; </span><span class="mi">11</span>         <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">column_name</span><span class="p">]</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">column_name</span><span class="p">]:</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>             <span class="k">break</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="c1"># Now we know the row number &quot;i&quot; - pick an age from that 10-yr range</span>
+<span class="nn">/var/folders/_l/l9rdg7gs4kx5gglxn_1y0wn00000gq/T/ipykernel_53719/1982874323.py</span> in <span class="ni">get_ethnicity</span><span class="nt">(df)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;cumulative_frac&quot;</span><span class="p">]:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>             <span class="k">break</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>         <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;cumulative_frac&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;cumulative_frac&quot;</span><span class="p">]:</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>             <span class="k">break</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Ethnicity&quot;</span><span class="p">]</span>
 
 <span class="nn">~/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages/pandas/core/indexing.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
 <span class="g g-Whitespace">    </span><span class="mi">929</span> 
@@ -1728,11 +1721,11 @@ We will start from a small baseline probability, and increase this based on seve
 <span class="g g-Whitespace">   </span><span class="mi">3385</span>                 <span class="n">index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
 
 <span class="nn">~/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages/pandas/core/series.py</span> in <span class="ni">__init__</span><span class="nt">(self, data, index, dtype, name, copy, fastpath)</span>
-<span class="g g-Whitespace">    </span><span class="mi">373</span>                 <span class="n">dtype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">371</span>                 <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="g g-Whitespace">    </span><span class="mi">372</span>             <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">373</span>                 <span class="n">dtype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">374</span> 
-<span class="ne">--&gt; </span><span class="mi">375</span>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">MultiIndex</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">376</span>                 <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">377</span>                     <span class="s2">&quot;initializing a Series from a MultiIndex is not supported&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">375</span>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">MultiIndex</span><span class="p">):</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -1787,280 +1780,280 @@ We will start from a small baseline probability, and increase this based on seve
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
-      <td>3c96eab3</td>
+      <th>0</th>
+      <td>031d28a9</td>
       <td>UHJ_43643</td>
-      <td>83</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.523036</td>
-      <td>46.055741</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>b2d7345e</td>
-      <td>UHJ_43643</td>
-      <td>48</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.577876</td>
-      <td>33.388356</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>ead19985</td>
-      <td>UHJ_43643</td>
-      <td>80</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.640164</td>
-      <td>71.938813</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>669082d5</td>
-      <td>UHJ_43643</td>
-      <td>66</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.469061</td>
-      <td>31.679456</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>150f52d1</td>
-      <td>UHJ_43643</td>
-      <td>85</td>
+      <td>84</td>
       <td>M</td>
       <td>White</td>
-      <td>1.846977</td>
-      <td>77.164762</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>5feb9000</td>
-      <td>UHJ_43643</td>
-      <td>53</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.736242</td>
-      <td>73.458529</td>
+      <td>1.768606</td>
+      <td>72.135416</td>
       <td>False</td>
       <td>NaT</td>
       <td>False</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>6</td>
-      <td>290b9d21</td>
-      <td>UHJ_43643</td>
-      <td>30</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.658339</td>
-      <td>65.757120</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>f314ebb2</td>
-      <td>UHJ_43643</td>
-      <td>75</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.671430</td>
-      <td>77.650406</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>eb1aee30</td>
-      <td>UHJ_43643</td>
-      <td>45</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.672083</td>
-      <td>84.986236</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>d380252a</td>
-      <td>UHJ_43643</td>
-      <td>37</td>
-      <td>F</td>
-      <td>Other ethnic groups</td>
-      <td>1.620353</td>
-      <td>47.227723</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>f805e493</td>
-      <td>UHJ_43643</td>
-      <td>83</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.659073</td>
-      <td>69.517318</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>0c62e549</td>
-      <td>UHJ_43643</td>
-      <td>82</td>
-      <td>M</td>
-      <td>White</td>
-      <td>1.634626</td>
-      <td>62.650175</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>4b220be8</td>
-      <td>UHJ_43643</td>
-      <td>70</td>
-      <td>M</td>
-      <td>White</td>
-      <td>1.827594</td>
-      <td>74.105328</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>33c4c37e</td>
-      <td>UHJ_43643</td>
-      <td>49</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.632662</td>
-      <td>64.152379</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>50e76e88</td>
-      <td>UHJ_43643</td>
-      <td>49</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.631914</td>
-      <td>56.188252</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>e60fa30b</td>
-      <td>UHJ_43643</td>
-      <td>74</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.626103</td>
-      <td>97.393239</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>16</td>
-      <td>febe38ff</td>
-      <td>UHJ_43643</td>
-      <td>53</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.683077</td>
-      <td>74.678795</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>d99bf7a6</td>
-      <td>UHJ_43643</td>
-      <td>40</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.613884</td>
-      <td>77.895890</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td>2315cbf6</td>
+      <th>1</th>
+      <td>d7332ae2</td>
       <td>UHJ_43643</td>
       <td>89</td>
       <td>M</td>
       <td>White</td>
-      <td>1.817695</td>
-      <td>69.937249</td>
+      <td>1.766615</td>
+      <td>67.226818</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>47e6bdb2</td>
+      <td>UHJ_43643</td>
+      <td>57</td>
+      <td>F</td>
+      <td>Other ethnic groups</td>
+      <td>1.696994</td>
+      <td>102.279190</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1247feb4</td>
+      <td>UHJ_43643</td>
+      <td>57</td>
+      <td>M</td>
+      <td>Asian / Asian British</td>
+      <td>1.793554</td>
+      <td>74.313369</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>b5593ac9</td>
+      <td>UHJ_43643</td>
+      <td>26</td>
+      <td>F</td>
+      <td>White</td>
+      <td>1.534127</td>
+      <td>51.765670</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1a57b272</td>
+      <td>UHJ_43643</td>
+      <td>59</td>
+      <td>F</td>
+      <td>Black / Black British</td>
+      <td>1.587301</td>
+      <td>74.798956</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>b0444fda</td>
+      <td>UHJ_43643</td>
+      <td>70</td>
+      <td>F</td>
+      <td>White</td>
+      <td>1.650987</td>
+      <td>54.720378</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>6c502c99</td>
+      <td>UHJ_43643</td>
+      <td>73</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.767746</td>
+      <td>84.218124</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0210b90d</td>
+      <td>UHJ_43643</td>
+      <td>83</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.815747</td>
+      <td>53.426677</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>159acaad</td>
+      <td>UHJ_43643</td>
+      <td>76</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.727532</td>
+      <td>66.428825</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>57d6ddaa</td>
+      <td>UHJ_43643</td>
+      <td>23</td>
+      <td>F</td>
+      <td>Other ethnic groups</td>
+      <td>1.714488</td>
+      <td>81.391735</td>
       <td>True</td>
-      <td>2020-04-13</td>
+      <td>2020-04-17</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>04df0cfd</td>
+      <td>UHJ_43643</td>
+      <td>51</td>
+      <td>M</td>
+      <td>Asian / Asian British</td>
+      <td>1.858737</td>
+      <td>66.674646</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>d98479e3</td>
+      <td>UHJ_43643</td>
+      <td>88</td>
+      <td>F</td>
+      <td>White</td>
+      <td>1.575969</td>
+      <td>73.075440</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>e0a0fdf6</td>
+      <td>UHJ_43643</td>
+      <td>89</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.803156</td>
+      <td>101.333145</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0399d38b</td>
+      <td>UHJ_43643</td>
+      <td>87</td>
+      <td>F</td>
+      <td>White</td>
+      <td>1.534629</td>
+      <td>53.197577</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>442830ab</td>
+      <td>UHJ_43643</td>
+      <td>69</td>
+      <td>F</td>
+      <td>White</td>
+      <td>1.549342</td>
+      <td>70.310351</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>14acbfaa</td>
+      <td>UHJ_43643</td>
+      <td>82</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.778708</td>
+      <td>98.286164</td>
+      <td>False</td>
+      <td>NaT</td>
       <td>False</td>
       <td>True</td>
     </tr>
     <tr>
-      <td>19</td>
-      <td>f90d7923</td>
+      <th>17</th>
+      <td>3d9e6536</td>
       <td>UHJ_43643</td>
-      <td>62</td>
+      <td>75</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.737340</td>
+      <td>72.589445</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>f2836542</td>
+      <td>UHJ_43643</td>
+      <td>78</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.731591</td>
+      <td>92.033507</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>a05cacf2</td>
+      <td>UHJ_43643</td>
+      <td>84</td>
       <td>F</td>
       <td>White</td>
-      <td>1.713221</td>
-      <td>86.916660</td>
+      <td>1.583162</td>
+      <td>66.710392</td>
       <td>False</td>
       <td>NaT</td>
       <td>False</td>
@@ -2092,9 +2085,10 @@ We will start from a small baseline probability, and increase this based on seve
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  0.,   0.,   2.,   4.,  11.,  34.,  39., 140., 999.,   0.]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([   0.,    0.,    2.,   10.,   21.,   52.,   82.,  245., 1382.,
+           0.]),
  array([  0.,  10.,  20.,  30.,  40.,  50.,  60.,  70.,  80.,  90., 100.]),
- &lt;a list of 10 Patch objects&gt;)
+ &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
 <img alt="../../../_images/synthetic_data_generation_47_1.png" src="../../../_images/synthetic_data_generation_47_1.png" />
@@ -2156,280 +2150,280 @@ We will start from a small baseline probability, and increase this based on seve
   </thead>
   <tbody>
     <tr>
-      <td>0</td>
-      <td>3c96eab3</td>
+      <th>0</th>
+      <td>031d28a9</td>
       <td>UHJ_43643</td>
-      <td>83</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.523036</td>
-      <td>46.055741</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>b2d7345e</td>
-      <td>UHJ_43643</td>
-      <td>48</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.577876</td>
-      <td>33.388356</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>ead19985</td>
-      <td>UHJ_43643</td>
-      <td>80</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.640164</td>
-      <td>71.938813</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>669082d5</td>
-      <td>UHJ_43643</td>
-      <td>66</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.469061</td>
-      <td>31.679456</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>150f52d1</td>
-      <td>UHJ_43643</td>
-      <td>85</td>
+      <td>84</td>
       <td>M</td>
       <td>White</td>
-      <td>1.846977</td>
-      <td>77.164762</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>5feb9000</td>
-      <td>UHJ_43643</td>
-      <td>53</td>
-      <td>null</td>
-      <td>White</td>
-      <td>1.736242</td>
-      <td>73.458529</td>
+      <td>1.768606</td>
+      <td>72.135416</td>
       <td>False</td>
       <td>NaT</td>
       <td>False</td>
       <td>False</td>
     </tr>
     <tr>
-      <td>6</td>
-      <td>290b9d21</td>
-      <td>UHJ_43643</td>
-      <td>30</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.658339</td>
-      <td>65.757120</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>f314ebb2</td>
-      <td>UHJ_43643</td>
-      <td>75</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.671430</td>
-      <td>77.650406</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>eb1aee30</td>
-      <td>UHJ_43643</td>
-      <td>45</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.672083</td>
-      <td>84.986236</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>d380252a</td>
-      <td>UHJ_43643</td>
-      <td>37</td>
-      <td>F</td>
-      <td>Other ethnic groups</td>
-      <td>1.620353</td>
-      <td>47.227723</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>f805e493</td>
-      <td>UHJ_43643</td>
-      <td>83</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.659073</td>
-      <td>69.517318</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>0c62e549</td>
-      <td>UHJ_43643</td>
-      <td>82</td>
-      <td>M</td>
-      <td>White</td>
-      <td>1.634626</td>
-      <td>62.650175</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>4b220be8</td>
-      <td>UHJ_43643</td>
-      <td>70</td>
-      <td>M</td>
-      <td>White</td>
-      <td>1.827594</td>
-      <td>74.105328</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>33c4c37e</td>
-      <td>UHJ_43643</td>
-      <td>49</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.632662</td>
-      <td>64.152379</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>50e76e88</td>
-      <td>UHJ_43643</td>
-      <td>49</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.631914</td>
-      <td>56.188252</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>e60fa30b</td>
-      <td>UHJ_43643</td>
-      <td>74</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.626103</td>
-      <td>97.393239</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>16</td>
-      <td>febe38ff</td>
-      <td>UHJ_43643</td>
-      <td>53</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.683077</td>
-      <td>74.678795</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>17</td>
-      <td>d99bf7a6</td>
-      <td>UHJ_43643</td>
-      <td>40</td>
-      <td>F</td>
-      <td>White</td>
-      <td>1.613884</td>
-      <td>77.895890</td>
-      <td>False</td>
-      <td>NaT</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <td>18</td>
-      <td>2315cbf6</td>
+      <th>1</th>
+      <td>d7332ae2</td>
       <td>UHJ_43643</td>
       <td>89</td>
       <td>M</td>
       <td>White</td>
-      <td>1.817695</td>
-      <td>69.937249</td>
+      <td>1.766615</td>
+      <td>67.226818</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>47e6bdb2</td>
+      <td>UHJ_43643</td>
+      <td>57</td>
+      <td>F</td>
+      <td>Other ethnic groups</td>
+      <td>1.696994</td>
+      <td>102.279190</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1247feb4</td>
+      <td>UHJ_43643</td>
+      <td>57</td>
+      <td>M</td>
+      <td>Asian / Asian British</td>
+      <td>1.793554</td>
+      <td>74.313369</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>b5593ac9</td>
+      <td>UHJ_43643</td>
+      <td>26</td>
+      <td>F</td>
+      <td>White</td>
+      <td>1.534127</td>
+      <td>51.765670</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1a57b272</td>
+      <td>UHJ_43643</td>
+      <td>59</td>
+      <td>F</td>
+      <td>Black / Black British</td>
+      <td>1.587301</td>
+      <td>74.798956</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>b0444fda</td>
+      <td>UHJ_43643</td>
+      <td>70</td>
+      <td>F</td>
+      <td>White</td>
+      <td>1.650987</td>
+      <td>54.720378</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>6c502c99</td>
+      <td>UHJ_43643</td>
+      <td>73</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.767746</td>
+      <td>84.218124</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0210b90d</td>
+      <td>UHJ_43643</td>
+      <td>83</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.815747</td>
+      <td>53.426677</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>159acaad</td>
+      <td>UHJ_43643</td>
+      <td>76</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.727532</td>
+      <td>66.428825</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>57d6ddaa</td>
+      <td>UHJ_43643</td>
+      <td>23</td>
+      <td>null</td>
+      <td>Other ethnic groups</td>
+      <td>1.714488</td>
+      <td>81.391735</td>
       <td>True</td>
-      <td>2020-04-13</td>
+      <td>2020-04-17</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>04df0cfd</td>
+      <td>UHJ_43643</td>
+      <td>51</td>
+      <td>M</td>
+      <td>Asian / Asian British</td>
+      <td>1.858737</td>
+      <td>66.674646</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>d98479e3</td>
+      <td>UHJ_43643</td>
+      <td>88</td>
+      <td>null</td>
+      <td>White</td>
+      <td>1.575969</td>
+      <td>73.075440</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>e0a0fdf6</td>
+      <td>UHJ_43643</td>
+      <td>89</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.803156</td>
+      <td>101.333145</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0399d38b</td>
+      <td>UHJ_43643</td>
+      <td>87</td>
+      <td>F</td>
+      <td>White</td>
+      <td>1.534629</td>
+      <td>53.197577</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>442830ab</td>
+      <td>UHJ_43643</td>
+      <td>69</td>
+      <td>F</td>
+      <td>White</td>
+      <td>1.549342</td>
+      <td>70.310351</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>14acbfaa</td>
+      <td>UHJ_43643</td>
+      <td>82</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.778708</td>
+      <td>98.286164</td>
+      <td>False</td>
+      <td>NaT</td>
       <td>False</td>
       <td>True</td>
     </tr>
     <tr>
-      <td>19</td>
-      <td>f90d7923</td>
+      <th>17</th>
+      <td>3d9e6536</td>
       <td>UHJ_43643</td>
-      <td>62</td>
+      <td>75</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.737340</td>
+      <td>72.589445</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>f2836542</td>
+      <td>UHJ_43643</td>
+      <td>78</td>
+      <td>M</td>
+      <td>White</td>
+      <td>1.731591</td>
+      <td>92.033507</td>
+      <td>False</td>
+      <td>NaT</td>
+      <td>False</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>a05cacf2</td>
+      <td>UHJ_43643</td>
+      <td>84</td>
       <td>F</td>
       <td>White</td>
-      <td>1.713221</td>
-      <td>86.916660</td>
+      <td>1.583162</td>
+      <td>66.710392</td>
       <td>False</td>
       <td>NaT</td>
       <td>False</td>
@@ -2442,7 +2436,7 @@ We will start from a small baseline probability, and increase this based on seve
 <p>Another potential bias could be that older people are under-represented in the dataset because they never presented at a hospital - write a function to remove some fraction of people in some age range:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_elderly_non_hospitalised</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">age_range</span><span class="p">,</span> <span class="n">prob_remove</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_elderly</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">age_range</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Remove some fraction (prob_remove) of people in a given age range </span>
 <span class="sd">    who weren&#39;t admitted to hospital</span>
@@ -2453,8 +2447,10 @@ We will start from a small baseline probability, and increase this based on seve
 <span class="sd">    age_range: list of 2 ints, min and max of age range to be removed</span>
 <span class="sd">    prob_remove (optional): fraction of patients within age range to remove</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">query_string</span> <span class="o">=</span> <span class="s2">&quot;(</span><span class="si">{}</span><span class="s2"> &lt; age &lt; </span><span class="si">{}</span><span class="s2">) &amp; (admitted==False)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">age_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">age_range</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="n">df_new</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query_string</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="n">prob_remove</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">query_string</span> <span class="o">=</span> <span class="s2">&quot;(</span><span class="si">{}</span><span class="s2"> &lt; age &lt; </span><span class="si">{}</span><span class="s2">)&amp; (died==True)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">age_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">age_range</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query_string</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">query_string</span> <span class="o">=</span> <span class="s2">&quot;(</span><span class="si">{}</span><span class="s2"> &lt; age &lt; </span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">age_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">age_range</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">df_new</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query_string</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">df_new</span>
             
 </pre></div>
@@ -2463,7 +2459,7 @@ We will start from a small baseline probability, and increase this based on seve
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_people</span> <span class="o">=</span> <span class="n">remove_elderly_non_hospitalised</span><span class="p">(</span><span class="n">df_people</span><span class="p">,[</span><span class="mi">75</span><span class="p">,</span><span class="mi">85</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_people</span> <span class="o">=</span> <span class="n">remove_elderly</span><span class="p">(</span><span class="n">df_people</span><span class="p">,[</span><span class="mi">75</span><span class="p">,</span><span class="mi">95</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -2480,7 +2476,8 @@ We will start from a small baseline probability, and increase this based on seve
 <p>OK, let’s output this to a different CSV file, which is what we will use as input for the data analysis task.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_people</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;covid_patients_syn_data.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_people</span> <span class="o">=</span> <span class="n">df_people</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;ethnicity&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_people</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;covid_patients_syn_data.csv&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2527,10 +2524,10 @@ We will start from a small baseline probability, and increase this based on seve
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../../../pcs/index.html" title="next page">
+        <a class="right-next" href="../../further_resources/participants.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">About this Guidebook</p>
+                <p class="prevnext-title">Course Participants</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

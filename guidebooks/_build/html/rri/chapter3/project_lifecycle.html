@@ -40,6 +40,8 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/api.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -71,6 +73,11 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Turing Commons</h1>
@@ -121,7 +128,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter2/history.html">
-     A Short History of RRI
+     Understanding RRI
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,6 +359,11 @@
      Generating a Synthetic Healthcare Dataset
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../further_resources/participants.html">
+     Course Participants
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -483,7 +495,7 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="introducing-the-project-lifecycle-a-sociotechnical-approach">
 <h1>Introducing the Project Lifecycle (A Sociotechnical Approach)<a class="headerlink" href="#introducing-the-project-lifecycle-a-sociotechnical-approach" title="Permalink to this headline">¶</a></h1>
 <p>There are many ways of carving up the lifecycle for a data science or AI project (hereafter, ‘project lifecycle’).<a class="footnote-reference brackets" href="#assurance" id="id1">1</a>
-For instance, <span id="id2">[<a class="reference internal" href="../../bibliography.html#id66">Sweenor <em>et al.</em>, 2020</a>]</span> break it into four stages: Build, Manage, Deploy &amp; Integrate, Monitor.<a class="footnote-reference brackets" href="#mlops" id="id3">2</a>
+For instance, <span id="id2">[<a class="reference internal" href="../../bibliography.html#id68">Sweenor <em>et al.</em>, 2020</a>]</span> break it into four stages: Build, Manage, Deploy &amp; Integrate, Monitor.<a class="footnote-reference brackets" href="#mlops" id="id3">2</a>
 <span id="id4">Ashmore <em>et al.</em> [<a class="reference internal" href="../../bibliography.html#id6">2019</a>]</span> also identify four stages, which have a more specific focus on data science: data management, model learning, model verification, and model deployment.</p>
 <p>The multiplicity of approaches is likely a product of the evolution of diverse methods in data mining/analytics, the significant impact of ML on research and innovation, and the specific practices and considerations inherent to each of the various domains where ML techniques are applied.
 While there are many benefits of existing frameworks, they do not tend to focus on the wider social or ethical aspects that interweave throughout the various stages of a ML lifecycle.</p>

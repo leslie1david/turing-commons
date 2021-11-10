@@ -316,7 +316,10 @@ def get_height_weight(age, sex):
     avg_bmi_min = 23
     avg_bmi = abs(60-age)*(avg_bmi_max-avg_bmi_min)/60 + avg_bmi_min
     std_bmi = 6.1 if sex=="F" else 4.7
-    bmi = random.gauss(avg_bmi, std_bmi)
+    # truncated Gaussian - it doesn't make sense to have BMI < 13 or > 50
+    bmi = 0.0
+    while (bmi < 13.5 or bmi > 50.):
+        bmi = random.gauss(avg_bmi, std_bmi)
     # calculate weight from height and bmi
     weight = bmi * height*height
     return height, weight
@@ -331,7 +334,7 @@ def get_height_weight(age, sex):
 # * BMI - having a BMI over 30 increases the chance of dying
 # * Sex - Men have a higher chance of dying of COVID than women
 # * Ethnicity - People of Chinese, Indian, Pakistani, Other Asian, Black Caribbean and Other Black ethnicity had between 10 and 50% higher risk of death when compared to White British - the numbers used here are based on table A1 in [the PHE document](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/908434/Disparities_in_the_risk_and_outcomes_of_COVID_August_2020_update.pdf)
-# * We also make some ad-hoc assumptions regarding whether the patient was hospitalised and had intrusive ventilation.   In general we assume that the most seriously ill patients were admitted, and given critical care, and these were most likely to die.  However, we don't enforce this relation for patients over 75, who were perhaps more likely to be in care homes.
+# * We also make some ad-hoc assumptions regarding whether the patient was hospitalised and had intrusive ventilation.   In general we assume that the most seriously ill patients were admitted, and given critical care, and these were most likely to die.  
 # - For those that were admitted, we apply a small correction to account for the fact that the knowledge in hospitals improved over time - we say 1% relative per day after 15th April
 
 # In[19]:
@@ -361,22 +364,23 @@ def did_patient_die(age,
         prob = prob * bmi_factor
     # modify for ethnicity
     if ethnicity == "Asian / Asian British":
-        prob = prob * 1.35
+        prob = prob * 1.36
     elif ethnicity == "Black / Black British":
-        prob = prob * 1.2
+        prob = prob * 1.22
     elif ethnicity == "Mixed / Multiple ethnic groups":
-        prob = prob * 1.1
+        prob = prob * 1.12
     elif ethnicity == "Other ethnic groups":
-        prob = prob * 1.02
+        prob = prob * 1.04
     # ad-hoc corrections for whether the patient was 
     # hospitalised, and given ventilation
-    if age < 75:
-        if admitted:
-            prob *= 2
-        else:
-            prob *= 0.5
+
+    if admitted:
+        prob *= 2
         if ventilation: # double the risk again
             prob *= 2
+    else:
+        prob *= 0.65
+
     # if patient was admitted, account for the fact that care improved after some date
     if admitted:
         if isinstance(admission_date, str):
@@ -386,7 +390,6 @@ def did_patient_die(age,
             prob = prob*(1 - t*0.01)
     # now lets see whether random number 0<x<1 is below prob
     x = random.random()
-#    return prob
     return x < prob
     
 
@@ -431,7 +434,7 @@ def generate_person(df_age_sex, df_ethnicity, df_admission, df_care):
 
 
 people = []
-for i in range(30000):
+for i in range(50000):
     if i % 1000 == 0:
         print("Generating", i)
     people.append(
@@ -445,13 +448,13 @@ for i in range(30000):
 
 # Now put this list of dicts into a pandas dataframe:
 
-# In[34]:
+# In[22]:
 
 
 df_people = pd.DataFrame.from_records(people)
 
 
-# In[35]:
+# In[23]:
 
 
 df_people.head(20)
@@ -459,7 +462,7 @@ df_people.head(20)
 
 # Now export this to a CSV file:
 
-# In[28]:
+# In[24]:
 
 
 df_people.to_csv("covid_patients_syn_data_unbiased.csv")
@@ -467,7 +470,7 @@ df_people.to_csv("covid_patients_syn_data_unbiased.csv")
 
 # Quick check on whether the age profile of the people that died looks sensible:
 
-# In[29]:
+# In[25]:
 
 
 df_died = df_people[df_people.died==True]
@@ -483,7 +486,7 @@ plt.hist(ages["F"],bins=10,range=(0,100), alpha=0.5, label="F")
 # 
 # There are a few possible ways that the data can be imperfect.  A simple example is the binary classification of sex into "M" and "F" - some fraction of our simulated patients may be non-binary, or will have not filled in this value.  Let's replace 5% of our "M" and "F" labels with "null".
 
-# In[30]:
+# In[26]:
 
 
 def add_null_gender(df, null_prob=0.05):
@@ -493,7 +496,7 @@ def add_null_gender(df, null_prob=0.05):
     return df
 
 
-# In[36]:
+# In[27]:
 
 
 df_people = add_null_gender(df_people)
@@ -502,10 +505,10 @@ df_people.head(20)
 
 # Another potential bias could be that older people are under-represented in the dataset because they never presented at a hospital - write a function to remove some fraction of people in some age range:
 
-# In[37]:
+# In[28]:
 
 
-def remove_elderly_non_hospitalised(df, age_range, prob_remove=0.5):
+def remove_elderly(df, age_range):
     """
     Remove some fraction (prob_remove) of people in a given age range 
     who weren't admitted to hospital
@@ -516,21 +519,23 @@ def remove_elderly_non_hospitalised(df, age_range, prob_remove=0.5):
     age_range: list of 2 ints, min and max of age range to be removed
     prob_remove (optional): fraction of patients within age range to remove
     """
-    query_string = "({} < age < {}) & (admitted==False)".format(age_range[0], age_range[1])
-    df_new = df.drop(df.query(query_string).sample(frac=prob_remove).index)
+    query_string = "({} < age < {})& (died==True)".format(age_range[0], age_range[1])
+    df = df.drop(df.query(query_string).sample(frac=0.3).index)
+    query_string = "({} < age < {})".format(age_range[0], age_range[1])
+    df_new = df.drop(df.query(query_string).sample(frac=0.3).index)
     return df_new
             
 
 
-# In[38]:
+# In[29]:
 
 
-df_people = remove_elderly_non_hospitalised(df_people,[75,85])
+df_people = remove_elderly(df_people,[75,95])
 
 
 # Data entry errors can also occur - perhaps someone gave their height in feet and inches rather than metres:
 
-# In[41]:
+# In[30]:
 
 
 index = random.randint(0,len(df_people))
@@ -539,9 +544,10 @@ df_people.at[index,"height"] = 5.9
 
 # OK, let's output this to a different CSV file, which is what we will use as input for the data analysis task.
 
-# In[43]:
+# In[35]:
 
 
+df_people = df_people.sort_values("ethnicity", ascending=False)
 df_people.to_csv("covid_patients_syn_data.csv")
 
 

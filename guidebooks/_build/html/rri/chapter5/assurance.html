@@ -40,6 +40,8 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/api.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -71,6 +73,11 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Turing Commons</h1>
@@ -121,7 +128,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter2/history.html">
-     A Short History of RRI
+     Understanding RRI
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,6 +359,11 @@
      Generating a Synthetic Healthcare Dataset
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../further_resources/participants.html">
+     Course Participants
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -542,7 +554,7 @@ This is not an argument in the antagonistic sense of the term, but rather a stru
 <p>The scope and content of what we can call an ‘assurance case’ is determined by the relevant details of the project in question, and what the project team need to provide assurance for. For example, if a project team needs to communicate the processes by which they have ensured the <em>interpretability</em> of their model, they may need to develop an <em>interpretability case</em>, which could look something like the following:</p>
 <div class="figure align-center" id="interpretability-case">
 <img alt="A template of an assurance case that focuses on providing assurance for the interpretability of a machine learning model." src="../../_images/interpretability-case.png" />
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">A template of an assurance case that focuses on providing assurance for the interpretability of a machine learning model. Reprinted from <span id="id3">[<a class="reference internal" href="../../bibliography.html#id71">Ward and Habli, 2020</a>]</span></span><a class="headerlink" href="#interpretability-case" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">A template of an assurance case that focuses on providing assurance for the interpretability of a machine learning model. Reprinted from <span id="id3">[<a class="reference internal" href="../../bibliography.html#id73">Ward and Habli, 2020</a>]</span></span><a class="headerlink" href="#interpretability-case" title="Permalink to this image">¶</a></p>
 </div>
 <p>Here, the assurance case is represented in a graphical format.
 The top-level claim is a goal that is supported by the lower level claims, which in turn further specify what it means to say “The {ML model} is sufficiently {interpretable} in the intended {context}”.

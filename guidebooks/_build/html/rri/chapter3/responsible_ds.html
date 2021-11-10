@@ -40,6 +40,8 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/api.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -71,6 +73,11 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Turing Commons</h1>
@@ -121,7 +128,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter2/history.html">
-     A Short History of RRI
+     Understanding RRI
     </a>
    </li>
    <li class="toctree-l2">
@@ -350,6 +357,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter4/project_design/synthetic_data_generation.html">
      Generating a Synthetic Healthcare Dataset
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../further_resources/participants.html">
+     Course Participants
     </a>
    </li>
   </ul>
@@ -678,7 +690,7 @@ For instance, what does it mean to develop a <em>fair</em> diagnostic model in h
 <p>Or, will only those wealthy enough to afford private healthcare receive this service?</p>
 <p>Should it instead be used for the most vulnerable and worse off in society?</p>
 <p>Questions such as these have no straightforward answer and are heavily context-dependant.
-Even if consensus were to be reached for a specific model used, say, in the diagnosis of lung cancer <span id="id8">[<a class="reference internal" href="../../bibliography.html#id65">Svoboda, 2020</a>]</span>, this would be no guarantee of a similar answer in a different area of healthcare (e.g., paediatrics, mental healthcare), or even for another diagnostic model in radiology (e.g., MRI instead of CT scans).
+Even if consensus were to be reached for a specific model used, say, in the diagnosis of lung cancer <span id="id8">[<a class="reference internal" href="../../bibliography.html#id67">Svoboda, 2020</a>]</span>, this would be no guarantee of a similar answer in a different area of healthcare (e.g., paediatrics, mental healthcare), or even for another diagnostic model in radiology (e.g., MRI instead of CT scans).
 Therefore, starting in the next section we will look at a model for helping us get a clear grasp of the situated and sociotechnical context under consideration in research and innovation projects.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">

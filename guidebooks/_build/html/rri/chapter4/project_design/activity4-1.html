@@ -40,6 +40,8 @@
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/api.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -71,6 +73,11 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Turing Commons</h1>
@@ -121,7 +128,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../chapter2/history.html">
-     A Short History of RRI
+     Understanding RRI
     </a>
    </li>
    <li class="toctree-l2">
@@ -352,6 +359,11 @@
      Generating a Synthetic Healthcare Dataset
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../further_resources/participants.html">
+     Course Participants
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -481,6 +493,13 @@
   <a class="reference internal nav-link" href="#instructions">
    Instructions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-personas">
+     Creating Personas
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -510,29 +529,121 @@ This is the first activity, therefore, where you will use one of the <a class="r
 <div class="section" id="instructions">
 <h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>First of all, go and read over the three <a class="reference internal" href="../case_studies.html"><span class="doc std std-doc">case studies</span></a>. Make sure to read them carefully because you will then have to decide with your group which one to select. It will then be used for all of the remaining activities in this chapter.</p></li>
-<li><p>Once you have selected your case study, head on over to the corresponding page for the one you have selected. There you will see a table that represents the path that your personas will ‘’walk along’’.</p></li>
-<li><p>Like with a board game, the personas move forwards and backwards along the path, but they do so based on the answers they would be likely to give to a series of questions. You will try to step into their shows and answer these questions in your groups, and the end result should be a comparative ranking of social privilege between the personas.</p></li>
+<li><p>First of all, go and read over the three <a class="reference internal" href="../case_studies.html"><span class="doc std std-doc">case studies</span></a>. You will only be using one, but it will be used for all of the remaining activities in this chapter—so, be sure to read them carefully.</p></li>
+<li><p>Once you have read the case studies, you will need to generate a set of personas to use for this activity (see next section).</p></li>
+<li><p>Once you have created your persons you will then head over to a Mural board where you can carry out the actual privilege walk.</p></li>
+<li><p>Like with a board game, these personas will move forwards and backwards along a path, but they will do so based on the answers they would be likely to give to a series of questions. You will try to step into their shows and answer these questions in your groups, and the end result should be a comparative ranking of social privilege between the personas.</p></li>
 </ol>
-<p>Because you are working with hypothetical personas and case studies, you may find that you don’t have access to all the necessary facts.
+<div class="section" id="creating-personas">
+<h3>Creating Personas<a class="headerlink" href="#creating-personas" title="Permalink to this headline">¶</a></h3>
+<p>First of all, we need to create some personas.
+To do this, there are general considerations we have put together for helping you flesh out your persona.
+First of all, look over the following considerations and try to identify some characteristics that you would like to use for your persona.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Consider the stakeholder groups for your case study<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">There should be <strong>at least</strong> one persona used within your breakout group for each of the stakeholder groups for your respective case study.</p>
+<p class="card-text"><strong>Predicting Risk of Reoffending</strong></p>
+<p class="card-text">The set of stakeholder groups for this case study include:</p>
+<ul class="simple">
+<li><p class="card-text">Judges</p></li>
+<li><p class="card-text">Jury</p></li>
+<li><p class="card-text">Defendants</p></li>
+<li><p class="card-text">Barristers</p></li>
+<li><p class="card-text">Family Members</p></li>
+<li><p class="card-text">Victims</p></li>
+<li><p class="card-text">Members of the Public</p></li>
+</ul>
+<p class="card-text"><strong>Recommending Courses</strong></p>
+<p class="card-text">The set of stakeholder groups for this case study include:</p>
+<ul class="simple">
+<li><p class="card-text">Students</p></li>
+<li><p class="card-text">Teachers/Staff</p></li>
+<li><p class="card-text">Parents</p></li>
+<li><p class="card-text">Friends (Peers)</p></li>
+</ul>
+<p class="card-text"><strong>Classifying Hate Speech</strong></p>
+<p class="card-text">The set of stakeholder groups for this case study include:</p>
+<ul class="simple">
+<li><p class="card-text">Social Media Users</p>
+<ul>
+<li><p class="card-text">Individual who posts hate speech</p></li>
+<li><p class="card-text">Individual, group, or similarly situated users who are targeted by hate speech</p></li>
+<li><p class="card-text">Other social media users whos posts may be reviewed</p></li>
+</ul>
+</li>
+<li><p class="card-text">Content Moderators</p></li>
+<li><p class="card-text">Social Media Researchers</p></li>
+<li><p class="card-text">Social Media Platform Staff</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Consider protected characteristics<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The Equality Act 2010 makes it illegal to discriminate against someone because of a protected characteristic. The set of protected characteristics are</p>
+<ul class="simple">
+<li><p class="card-text">age</p></li>
+<li><p class="card-text">disability</p></li>
+<li><p class="card-text">gender reassignment</p></li>
+<li><p class="card-text">marriage and civil partnership</p></li>
+<li><p class="card-text">pregnancy and maternity</p></li>
+<li><p class="card-text">race</p></li>
+<li><p class="card-text">religion or belief</p></li>
+<li><p class="card-text">sex</p></li>
+<li><p class="card-text">sexual orientation</p></li>
+</ul>
+<p class="card-text">Consider what protected characteristics could increase stakeholders’ vulnerability to abuse or discrimination, or for reason of which they may require additional protection or assistance with respect to the impacts of this project.</p>
+<p class="card-text">Read more about ‘protected characteristics over on the <a class="reference external" href="https://www.equalityhumanrights.com/en/equality-act/protected-characteristics">Equality and Human Rights Commission’s</a> website.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Consider additional factors<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Consider additional factors about your persona’s identity, such as background economic factors (e.g. employment) or social factors (e.g. supportive friendship group) that you think will have an impact on their comparative levels of privilege (e.g. attended well-funded, private school).</p>
+</div>
+</details><p>Now, try to devise a  set of personas within your groups that represent a diverse set of the above characteristics.
+Because you are working with hypothetical personas and case studies, you may find that you don’t have access to all the necessary facts.
 Don’t worry; the results of this activity are not what matter.
 Rather, it is intended as an aid for reflection.
 It’s fine if you need to speculate a bit to fill in the gaps.
 Just make sure to discuss it with your team to ensure the details are plausible and largely agreed upon.</p>
-<!-- 
-### Activity 5: Privilege Walk 
-
-This is the first activity that will involve the case studies introduced at the start of the chapter. It is a known as a "privilege walk" and is designed to help you reflect on how disparate forms of social privilege interact and how different harms or benefits associated with your research or innovation project may have disparate impacts on affected stakeholders.
-
-Please visit https://bit.ly/3jqJjx8 to view the associated instructions.
-
--->
+<div class="tip admonition">
+<p class="admonition-title">Learning Objectives</p>
+<p>Here are three examples, one for each of the case studies:</p>
+<ul class="simple">
+<li><p>Clara is a Black Carribean woman who has been summoned to court on jury service. English is her second language, and she occasionally has minor difficulties with comprehension. She is in her late 60s, and has low levels of science and technological literacy.</p></li>
+<li><p>Samar is a volunteer councillor who offers support and careers advice to students. He chooses to do this because it offers him a source of meaning and connection to the community because his own education and employment were impacted by dyslexia.</p></li>
+<li><p>Jesse is a transgender person who identifies as non-binary. They are a content moderator for the social media platform, but also an user of the platform where they actively contribute to many diverse communities and forums, some of which are related to their self-identity as a transgender person.</p></li>
+</ul>
+</div>
+<div class="admonition-mural admonition">
+<p class="admonition-title">Mural</p>
+<p>If you are doing this as part of an instructor-led version of the course, you will be given a specific link to an interactive Mural board to support this activity. Otherwise, feel free to use the following template to create your own.</p>
+</div>
+<iframe src='https://app.mural.co/embed/b9c91961-fb0d-4950-9887-7381ba15ca30'
+        width='100%'
+        height='480px'
+        style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef'
+        sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'>
+</iframe>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="bbc"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>This example is real, and was reported on by the <a class="reference external" href="https://www.bbc.co.uk/news/technology-54349538">BBC</a> who carried out the research, which was supported by the Alan Turing Institute. The research found that women with darker skin were more than twice as likely to be told their photos fail UK passport rules when they submit them online than lighter-skinned men.</p>
 </dd>
 </dl>
+</div>
 </div>
 </div>
 

@@ -1,6 +1,12 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 # Further Reading
 
 [NB: This section is not finished]
+
+<div class="container">
+    <h2>References</h2>
+</div>
 
 <!-- ## Interpretability and Explainability
 

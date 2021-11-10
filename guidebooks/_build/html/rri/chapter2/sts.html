@@ -40,6 +40,8 @@
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/api.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -73,6 +75,11 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Turing Commons</h1>
@@ -123,7 +130,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="history.html">
-     A Short History of RRI
+     Understanding RRI
     </a>
    </li>
    <li class="toctree-l2">
@@ -354,6 +361,11 @@
      Generating a Synthetic Healthcare Dataset
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../further_resources/participants.html">
+     Course Participants
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -548,18 +560,18 @@ To help us address this question, we will look at some of the practical ways tha
 This is a primary objective for the entire course, but we can introduce some of the practical mechanisms now.</p>
 <div class="section" id="risk-and-impact-assessments">
 <h2>Risk and Impact Assessments<a class="headerlink" href="#risk-and-impact-assessments" title="Permalink to this headline">¶</a></h2>
-<p>At the <a class="reference internal" href="responsibility.html"><span class="doc std std-doc">start of this chapter</span></a> we looked at a definition of RRI from <span id="id3">[<a class="reference internal" href="../../bibliography.html#id70">Von Schomberg, 2011</a>]</span>.
+<p>At the <a class="reference internal" href="responsibility.html"><span class="doc std std-doc">start of this chapter</span></a> we looked at a definition of RRI from <span id="id3">[<a class="reference internal" href="../../bibliography.html#id72">Von Schomberg, 2011</a>]</span>.
 Let’s look at another one, this time from the European Commission:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e21c4046-8b50-4eed-a5d0-69936644ee8b" name="d5d5673d-57a3-4051-a5b6-0faa46ac514e" type="radio">
-</input><label class="tabbed-label" for="e21c4046-8b50-4eed-a5d0-69936644ee8b">
+<input checked="checked" id="79927e59-5a81-47ee-9b90-ceaf9a4aa7eb" name="704fca85-e3db-4808-9ba7-dc6eec4f733c" type="radio">
+</input><label class="tabbed-label" for="79927e59-5a81-47ee-9b90-ceaf9a4aa7eb">
 European Commission</label><div class="tabbed-content docutils">
 <p>Responsible research and innovation is an approach that anticipates and assesses potential implications and societal expectations with regard to research and innovation, with the aim to foster the design of inclusive and sustainable research and innovation. <span id="id4">[<a class="reference internal" href="../../bibliography.html#id23">Commission, 2014</a>]</span></p>
 </div>
-<input id="667d20e5-0598-486e-bc20-a8680c9f1e3f" name="d5d5673d-57a3-4051-a5b6-0faa46ac514e" type="radio">
-</input><label class="tabbed-label" for="667d20e5-0598-486e-bc20-a8680c9f1e3f">
+<input id="964fa476-ef52-42dc-8530-c55be6288e95" name="704fca85-e3db-4808-9ba7-dc6eec4f733c" type="radio">
+</input><label class="tabbed-label" for="964fa476-ef52-42dc-8530-c55be6288e95">
 René von Schomberg</label><div class="tabbed-content docutils">
-<p>Responsible Research and Innovation is a transparent, interactive process by which societal actors and innovators become mutually responsive to each other with a view on the (ethical) acceptability, sustainability and societal desirability of the innovation process and its marketable products (in order to allow a proper embedding of scientific and technological advances in our society). <span id="id5">[<a class="reference internal" href="../../bibliography.html#id70">Von Schomberg, 2011</a>]</span></p>
+<p>Responsible Research and Innovation is a transparent, interactive process by which societal actors and innovators become mutually responsive to each other with a view on the (ethical) acceptability, sustainability and societal desirability of the innovation process and its marketable products (in order to allow a proper embedding of scientific and technological advances in our society). <span id="id5">[<a class="reference internal" href="../../bibliography.html#id72">Von Schomberg, 2011</a>]</span></p>
 </div>
 </div>
 <p>There are many similarities between the two definitions, but they also emphasise different aspects through their choice of terminology.
