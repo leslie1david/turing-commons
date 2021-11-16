@@ -2,6 +2,9 @@
 
 <div class="zoteroreferences">
 <p>This section is unfinished. Currently working on integrating a script to fetch data from an associated Zotero API.</p>
+<p>
+See <a href="https://github.com/chrisdburr/turing-commons/issues/34">associated issue for updates</a>
+</p>
 </div>
 
 <!-- ## Interpretability and Explainability
