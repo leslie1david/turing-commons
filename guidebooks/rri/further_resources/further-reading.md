@@ -1,6 +1,8 @@
 # Further Reading
 
-[NB: This section is not finished]
+<div class="zoteroreferences">
+<p>This section is unfinished. Currently working on integrating a script to fetch data from an associated Zotero API.</p>
+</div>
 
 <!-- ## Interpretability and Explainability
 

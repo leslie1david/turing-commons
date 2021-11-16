@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generating a Synthetic Healthcare Dataset &#8212; Turing Commons</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
@@ -56,7 +56,10 @@
     <link rel="next" title="Course Participants" href="../../further_resources/participants.html" />
     <link rel="prev" title="Further Reading" href="../../further_resources/further-reading.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -95,7 +98,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Responsible Research and Innovation
  </span>
@@ -367,7 +370,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Public Engagement and Communication of Science
  </span>
@@ -379,7 +382,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   AI Ethics and Governance
  </span>
@@ -391,7 +394,7 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   References
  </span>
@@ -578,6 +581,20 @@ The dataset is used in <a class="reference internal" href="../index.html"><span 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">ce67ebee3a4d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">datetime</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">uuid</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;matplotlib&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="nhs-id">
 <h2>NHS ID<a class="headerlink" href="#nhs-id" title="Permalink to this headline">¶</a></h2>
@@ -602,8 +619,8 @@ The dataset is used in <a class="reference internal" href="../index.html"><span 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: odfpy in /Users/cburr/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages (1.4.1)
-Requirement already satisfied: defusedxml in /Users/cburr/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages (from odfpy) (0.7.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: odfpy in /Users/nbarlow/opt/anaconda3/envs/rds-course-env/lib/python3.8/site-packages (1.4.1)
+Requirement already satisfied: defusedxml in /Users/nbarlow/opt/anaconda3/envs/rds-course-env/lib/python3.8/site-packages (from odfpy) (0.7.1)
 </pre></div>
 </div>
 </div>
@@ -845,7 +862,7 @@ Requirement already satisfied: defusedxml in /Users/cburr/opt/anaconda3/envs/tur
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  0.,   0.,  50.,  73.,  76.,  95.,  58.,  52., 141.,   0.]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  0.,   0.,  56.,  57.,  66.,  77.,  50.,  65., 148.,   0.]),
  array([  0.,  10.,  20.,  30.,  40.,  50.,  60.,  70.,  80.,  90., 100.]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
@@ -1028,7 +1045,7 @@ Here we have a bit more work to do.  For the moment, we don’t care about the d
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/_l/l9rdg7gs4kx5gglxn_1y0wn00000gq/T/ipykernel_53719/880005673.py:3: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/22/g5308nqx45b_3dn_vxf54jf089wmc1/T/ipykernel_68207/880005673.py:3: FutureWarning: Dropping of nuisance columns in DataFrame reductions (with &#39;numeric_only=None&#39;) is deprecated; in a future version this will raise TypeError.  Select only valid columns before calling the reduction.
   df_hospital_admissions[&quot;sum&quot;] = df_hospital_admissions.sum(axis=1)
 </pre></div>
 </div>
@@ -1641,93 +1658,55 @@ We will start from a small baseline probability, and increase this based on seve
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 1000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 2000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 3000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 4000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 5000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 6000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 7000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 8000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 9000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 10000
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Generating 11000
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_l</span><span class="o">/</span><span class="n">l9rdg7gs4kx5gglxn_1y0wn00000gq</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_53719</span><span class="o">/</span><span class="mf">3570010159.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Generating&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">people</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-<span class="ne">----&gt; </span><span class="mi">6</span>         <span class="n">generate_person</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>             <span class="n">df_cases_age_sex</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>             <span class="n">df_ethnicity_summary</span><span class="p">,</span>
-
-<span class="nn">/var/folders/_l/l9rdg7gs4kx5gglxn_1y0wn00000gq/T/ipykernel_53719/3597934511.py</span> in <span class="ni">generate_person</span><span class="nt">(df_age_sex, df_ethnicity, df_admission, df_care)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">sex</span> <span class="o">=</span> <span class="n">get_sex</span><span class="p">(</span><span class="n">df_age_sex</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">age</span> <span class="o">=</span> <span class="n">get_age</span><span class="p">(</span><span class="n">df_age_sex</span><span class="p">,</span> <span class="n">sex</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">ethnicity</span> <span class="o">=</span> <span class="n">get_ethnicity</span><span class="p">(</span><span class="n">df_ethnicity</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">admitted</span><span class="p">,</span> <span class="n">admission_date</span><span class="p">,</span> <span class="n">ventilated</span> <span class="o">=</span> <span class="n">get_hospital_data</span><span class="p">(</span><span class="n">df_admission</span><span class="p">,</span> <span class="n">df_care</span><span class="p">,</span> <span class="n">ethnicity</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">height</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="n">get_height_weight</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">sex</span><span class="p">)</span>
-
-<span class="nn">/var/folders/_l/l9rdg7gs4kx5gglxn_1y0wn00000gq/T/ipykernel_53719/1982874323.py</span> in <span class="ni">get_ethnicity</span><span class="nt">(df)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>         <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;cumulative_frac&quot;</span><span class="p">]:</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>             <span class="k">break</span>
-<span class="ne">----&gt; </span><span class="mi">6</span>         <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;cumulative_frac&quot;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;cumulative_frac&quot;</span><span class="p">]:</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>             <span class="k">break</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Ethnicity&quot;</span><span class="p">]</span>
-
-<span class="nn">~/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages/pandas/core/indexing.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">    </span><span class="mi">929</span> 
-<span class="g g-Whitespace">    </span><span class="mi">930</span>             <span class="n">maybe_callable</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">apply_if_callable</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">931</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_axis</span><span class="p">(</span><span class="n">maybe_callable</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">932</span> 
-<span class="g g-Whitespace">    </span><span class="mi">933</span>     <span class="k">def</span> <span class="nf">_is_scalar_access</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">):</span>
-
-<span class="nn">~/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages/pandas/core/indexing.py</span> in <span class="ni">_getitem_axis</span><span class="nt">(self, key, axis)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1566</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_validate_integer</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1567</span> 
-<span class="ne">-&gt; </span><span class="mi">1568</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">_ixs</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1569</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1570</span>     <span class="k">def</span> <span class="nf">_get_slice_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slice_obj</span><span class="p">:</span> <span class="nb">slice</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-
-<span class="nn">~/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages/pandas/core/frame.py</span> in <span class="ni">_ixs</span><span class="nt">(self, i, axis)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3381</span>             <span class="c1"># if we are a copy, mark as such</span>
-<span class="g g-Whitespace">   </span><span class="mi">3382</span>             <span class="n">copy</span> <span class="o">=</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">new_values</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="n">new_values</span><span class="o">.</span><span class="n">base</span> <span class="ow">is</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">3383</span>             <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_constructor_sliced</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">3384</span>                 <span class="n">new_values</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3385</span>                 <span class="n">index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
-
-<span class="nn">~/opt/anaconda3/envs/turing-commons/lib/python3.9/site-packages/pandas/core/series.py</span> in <span class="ni">__init__</span><span class="nt">(self, data, index, dtype, name, copy, fastpath)</span>
-<span class="g g-Whitespace">    </span><span class="mi">371</span>                 <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="g g-Whitespace">    </span><span class="mi">372</span>             <span class="k">if</span> <span class="n">dtype</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">373</span>                 <span class="n">dtype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">374</span> 
-<span class="g g-Whitespace">    </span><span class="mi">375</span>             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">MultiIndex</span><span class="p">):</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+Generating 1000
+Generating 2000
+Generating 3000
+Generating 4000
+Generating 5000
+Generating 6000
+Generating 7000
+Generating 8000
+Generating 9000
+Generating 10000
+Generating 11000
+Generating 12000
+Generating 13000
+Generating 14000
+Generating 15000
+Generating 16000
+Generating 17000
+Generating 18000
+Generating 19000
+Generating 20000
+Generating 21000
+Generating 22000
+Generating 23000
+Generating 24000
+Generating 25000
+Generating 26000
+Generating 27000
+Generating 28000
+Generating 29000
+Generating 30000
+Generating 31000
+Generating 32000
+Generating 33000
+Generating 34000
+Generating 35000
+Generating 36000
+Generating 37000
+Generating 38000
+Generating 39000
+Generating 40000
+Generating 41000
+Generating 42000
+Generating 43000
+Generating 44000
+Generating 45000
+Generating 46000
+Generating 47000
+Generating 48000
+Generating 49000
 </pre></div>
 </div>
 </div>
@@ -2508,31 +2487,22 @@ We will start from a small baseline probability, and increase this based on seve
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="../../further_resources/further-reading.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Further Reading</p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../../further_resources/further-reading.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Further Reading</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../further_resources/participants.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Course Participants</p>
     </div>
-     <div id="next">
-        <a class="right-next" href="../../further_resources/participants.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Course Participants</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
@@ -2552,8 +2522,7 @@ We will start from a small baseline probability, and increase this based on seve
       </div>
     </div>
   
-  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

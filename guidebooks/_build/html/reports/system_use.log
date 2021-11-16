@@ -17,26 +17,39 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# The following lines import necessary packages and renames them 
-
 import numpy as np
-import pandas as pd
-import matplotlib.pylab as plt
-import seaborn as sns
+import matplotlib.pyplot as plt
 
-# This line imports data from a csv file 
+# setting values for x
+mu1, mu2, sigma = 50,80, 15
+x1 = mu1+sigma*np.random.randn(10000)
+x2 = mu2+sigma*np.random.randn(10000)
+fig, axes = plt.subplots(1,2,figsize=(12,5))
 
-df = pd.read_csv('covid_patients_syn_data.csv')
+# distibution t=1
+n, bins, patches = axes[0].hist(x1, 50, density=True, facecolor='g', alpha=0.75)
+axes[0].set_title('Distribution T=1')
+axes[0].set_xlim(0, 100)
+axes[0].set_ylim(0, 0.03)
+axes[0].grid(True)
+
+# distribution t=2
+n, bins, patches = axes[1].hist(x2, 50, density=True, facecolor='b', alpha=0.75)
+axes[1].set_title('Distribution T=2')
+axes[1].set_xlim(0, 100)
+axes[1].set_ylim(0, 0.03)
+axes[1].grid(True)
+plt.show()
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m<ipython-input-1-26bc1858e509>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0;31m# The following lines import necessary packages and renames them[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0;34m[0m[0m
-[0;32m----> 3[0;31m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      4[0m [0;32mimport[0m [0mpandas[0m [0;32mas[0m [0mpd[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      5[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpylab[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
+[0;32m<ipython-input-1-cf2801c31536>[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0;32mimport[0m [0mnumpy[0m [0;32mas[0m [0mnp[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;32mimport[0m [0mmatplotlib[0m[0;34m.[0m[0mpyplot[0m [0;32mas[0m [0mplt[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0;31m# setting values for x[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mmu1[0m[0;34m,[0m [0mmu2[0m[0;34m,[0m [0msigma[0m [0;34m=[0m [0;36m50[0m[0;34m,[0m[0;36m80[0m[0;34m,[0m [0;36m15[0m[0;34m[0m[0;34m[0m[0m
 
 [0;31mModuleNotFoundError[0m: No module named 'numpy'
 ModuleNotFoundError: No module named 'numpy'

@@ -1,11 +1,7 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 # Further Reading
 
-[NB: This section is not finished]
-
-<div class="container">
-    <h2>References</h2>
+<div class="zoteroreferences">
+<p>This section is unfinished. Currently working on integrating a script to fetch data from an associated Zotero API.</p>
 </div>
 
 <!-- ## Interpretability and Explainability

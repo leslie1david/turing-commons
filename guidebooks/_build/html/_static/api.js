@@ -1,6 +1,6 @@
 window.onload = function () {
   $.getJSON(
-    "https://api.zotero.org/groups/4441221/collections/ACN3AY7D/items?format=json",
+    "https://api.zotero.org/groups/4441221/collections/DA9HDLFS/items?format=json",
     function (data) {
       var items = [];
       $.each(data, function (key, val) {
@@ -32,39 +32,14 @@ window.onload = function () {
           var url = GenerateUrl(val.data.url, val.data.DOI, recordTitle);
 
           //Generate HTML string as array
-          items.push(
-            '<div class="card margin-top" id=\'' +
-              "title_" +
-              key +
-              "'>" +
-              '<div class="card-header">' +
-              authors +
-              "</div>" +
-              '<div class="card-body">' +
-              '<h5 class="card-title">' +
-              val.data.title +
-              "</h5>" +
-              '<p class="card-text">' +
-              note +
-              "</p>" +
-              '<a target="_blank" href=' +
-              '"' +
-              url +
-              '"' +
-              'class="btn btn-primary">' +
-              "Read now" +
-              "</a>" +
-              "</div>" +
-              "</div>"
-          );
+          items.push(key + authors + val.data.title + note + url);
         }
       });
-
       //Render HTML
       $("<section/>", {
         class: "bibliography",
         html: items.join(""),
-      }).appendTo(".container");
+      }).appendTo(".zoteroreferences");
     }
   );
 };
