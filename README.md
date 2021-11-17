@@ -2,7 +2,7 @@
 
 *Total Contributors:*
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 | Information | Links |
@@ -37,13 +37,18 @@ In addition, thanks goes to these wonderful people for contributing to the cours
     <td align="center"><a href="https://github.com/fatemehnj"><img src="https://avatars.githubusercontent.com/u/57012821?v=4?s=100" width="100px;" alt=""/><br /><sub><b>fatemehnj</b></sub></a><br /><a href="#tutorial-fatemehnj" title="Tutorials">✅</a></td>
     <td align="center"><a href="https://github.com/aragn"><img src="https://avatars.githubusercontent.com/u/93764134?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrea</b></sub></a><br /><a href="#tutorial-aragn" title="Tutorials">✅</a></td>
     <td align="center"><a href="https://github.com/ejmoss"><img src="https://avatars.githubusercontent.com/u/93876346?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ejmoss</b></sub></a><br /><a href="#tutorial-ejmoss" title="Tutorials">✅</a></td>
+  </tr>
+  <tr>
     <td align="center"><a href="https://github.com/GregorMilliganUoN"><img src="https://avatars.githubusercontent.com/u/93982636?v=4?s=100" width="100px;" alt=""/><br /><sub><b>GregorMilliganUoN</b></sub></a><br /><a href="#tutorial-GregorMilliganUoN" title="Tutorials">✅</a></td>
     <td align="center"><a href="https://github.com/mayaracarneiro2"><img src="https://avatars.githubusercontent.com/u/93540980?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mayaracarneiro2</b></sub></a><br /><a href="#tutorial-mayaracarneiro2" title="Tutorials">✅</a></td>
-    <td align="center"><a href="https://github.com/AusteSimkute"><img src="https://avatars.githubusercontent.com/u/93768855?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AusteSimkute</b></sub></a><br /><a href="#tutorial-AusteSimkute" title="Tutorials">✅</a></td>
     <td align="center"><a href="http://jending.com"><img src="https://avatars.githubusercontent.com/u/5104098?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jennifer Ding</b></sub></a><br /><a href="#tutorial-dingaaling" title="Tutorials">✅</a></td>
     <td align="center"><a href="https://emmavestesson.netlify.com/"><img src="https://avatars.githubusercontent.com/u/31949401?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Emma Vestesson</b></sub></a><br /><a href="#tutorial-emmavestesson" title="Tutorials">✅</a></td>
     <td align="center"><a href="https://github.com/GeorgiaHCA"><img src="https://avatars.githubusercontent.com/u/46889966?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Georgia</b></sub></a><br /><a href="#tutorial-GeorgiaHCA" title="Tutorials">✅</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/anandkumaresh/"><img src="https://avatars.githubusercontent.com/u/23694493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>anandkumaresh</b></sub></a><br /><a href="#tutorial-anandkumaresh" title="Tutorials">✅</a></td>
+    <td align="center"><a href="https://github.com/AusteSimkute"><img src="https://avatars.githubusercontent.com/u/93768855?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AusteSimkute</b></sub></a><br /><a href="#tutorial-AusteSimkute" title="Tutorials">✅</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/AshmitaRandhawa"><img src="https://avatars.githubusercontent.com/u/93534798?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AshmitaRandhawa</b></sub></a><br /><a href="#tutorial-AshmitaRandhawa" title="Tutorials">✅</a></td>
   </tr>
 </table>
 
