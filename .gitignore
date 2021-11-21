@@ -2,3 +2,4 @@
 outline.md
 *.key
 /.venv
+**/_build
