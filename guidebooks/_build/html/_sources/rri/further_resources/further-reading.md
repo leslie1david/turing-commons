@@ -1,7 +1,15 @@
 # Further Reading
 
 <div class="zoteroreferences">
-<p>This section is unfinished. Currently working on integrating a script to fetch data from an associated Zotero API.</p>
+<section id="explainability-section">
+<h2 >Explainability</h2>
+<p>dewdewddew</p>
+</section>
+
+<section id="fairness-section">
+<h2>Fairness</h2>
+<p>dewdewddew</p>
+</section>
 </div>
 
 <!-- ## Interpretability and Explainability

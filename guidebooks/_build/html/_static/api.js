@@ -1,8 +1,10 @@
+//Updated URL
 window.onload = function () {
   $.getJSON(
     "https://api.zotero.org/groups/4441221/collections/DA9HDLFS/items?format=json",
     function (data) {
-      var items = [];
+      var fairnessItems = [];
+      var explainabilityItems = [];
       $.each(data, function (key, val) {
         if (val.data.title) {
           //Set note value
@@ -21,25 +23,97 @@ window.onload = function () {
             recordTitle = val.data.institution;
           }
 
-          //Set authors value
-          var authors = CreateAuthorsString(
-            val.data.creators.length,
-            val.data.creators,
-            val.data.date
-          );
+          var authors = "";
+
+          if (val.data.authors) {
+            //Set authors value
+            authors = CreateAuthorsString(
+              val.data.creators.length,
+              val.data.creators,
+              val.data.date
+            );
+          }
 
           //Set URL value
           var url = GenerateUrl(val.data.url, val.data.DOI, recordTitle);
 
+          var tag = "";
+
+          if (val.data.tags) {
+            tag = val.data.tags[0].tag.toLowerCase();
+          }
+
+          console.log(tag);
+
           //Generate HTML string as array
-          items.push(key + authors + val.data.title + note + url);
+
+          if (tag === "fairness") {
+            fairnessItems.push(
+              '<div class="" id=\'' +
+                "title_" +
+                key +
+                "'>" +
+                '<div class="">' +
+                authors +
+                "</div>" +
+                '<div class="">' +
+                '<h5 class="">' +
+                val.data.title +
+                "</h5>" +
+                '<p class="">' +
+                note +
+                "</p>" +
+                '<a target="_blank" href=' +
+                '"' +
+                url +
+                '"' +
+                'class="">' +
+                "Read now" +
+                "</a>" +
+                "</div>" +
+                "</div>"
+            );
+          }
+
+          if (tag === "explainability") {
+            explainabilityItems.push(
+              '<div class="" id=\'' +
+                "title_" +
+                key +
+                "'>" +
+                '<div class="">' +
+                authors +
+                "</div>" +
+                '<div class="">' +
+                '<h5 class="">' +
+                val.data.title +
+                "</h5>" +
+                '<p class="">' +
+                note +
+                "</p>" +
+                '<a target="_blank" href=' +
+                '"' +
+                url +
+                '"' +
+                'class="">' +
+                "Read now" +
+                "</a>" +
+                "</div>" +
+                "</div>"
+            );
+          }
         }
       });
+
       //Render HTML
       $("<section/>", {
         class: "bibliography",
-        html: items.join(""),
-      }).appendTo(".zoteroreferences");
+        html: fairnessItems.join(""),
+      }).appendTo("#fairness-section");
+      $("<section/>", {
+        class: "bibliography",
+        html: explainabilityItems.join(""),
+      }).appendTo("#explainability-section");
     }
   );
 };

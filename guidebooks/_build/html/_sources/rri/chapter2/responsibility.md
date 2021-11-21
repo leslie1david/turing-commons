@@ -9,18 +9,18 @@ In an oft-cited article, Von Schomberg defines RRI as follows:
 
 This is a helpful definition, but it can be challenging to grasp its meaning on first glance, so let's break it down.
 
-First, we have the phrase, **"transparent, interactive process by which societal actors and innovators become mutually responsive to each other"**.
+First, we have the phrase, _"transparent, interactive process by which societal actors and innovators become mutually responsive to each other"_.
 This is straightforward enough. Without transparency and interaction between innovators, researchers, and society, associated outcomes cannot be meaningfully scrutinised or challenged.
 As such, possible harms or unintended consequences may go unnoticed.
 For example, if a medical research team failed to interact with and explain to their study participants the risks of a novel drug they are testing, the lack of transparency may prevent the participants from giving their meaningful and informed consent.
 
-Second, we have the goal to which the transparent, interactive process is directed: **"with a view on the (ethical) acceptability, sustainability and societal desirability of the innovation process".**
+Second, we have the goal to which the transparent, interactive process is directed: _"with a view on the (ethical) acceptability, sustainability and societal desirability of the innovation process"._
 The process of (responsible) research and innovation is necessarily dialogical and inclusive because it acknowledges an inherent pluralism of values that are implicated within the research and innovation lifecycle.
 For instance, many would agree that technological advances in renewable energy are desirable because of their contribution to a more sustainable future.
 But there may be disagreement about specific projects, such as the development of a hydroelectric power plant that displaces downstream communities by disrupting the local ecology.
 Such a tension between values can only be observed and resolved through a transparent and interactive process with affected and impacted stakeholders.
 
-Finally, von Schomberg's definition draws our attention to how RRI facilitates a, **"proper embedding of scientific and technological advances in our society".**
+Finally, von Schomberg's definition draws our attention to how RRI facilitates a, _"proper embedding of scientific and technological advances in our society"._
 This is another way of saying that scientific research and technological innovation do not operate in a vacuum.
 It draws our attention to the fact that the practices and processes or research and innovation occur at a specific place and time, and also to an awareness of their consequences, which can vary in scope and impact.
 Obvious examples, such as the development of the atomic bomb, the discovery of penicillin, or the invention of the internet may spring to mind.
