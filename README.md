@@ -2,7 +2,7 @@
 
 *Total Contributors:*
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 | Information | Links |
@@ -49,6 +49,7 @@ In addition, thanks goes to these wonderful people for contributing to the cours
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/AshmitaRandhawa"><img src="https://avatars.githubusercontent.com/u/93534798?v=4?s=100" width="100px;" alt=""/><br /><sub><b>AshmitaRandhawa</b></sub></a><br /><a href="#tutorial-AshmitaRandhawa" title="Tutorials">✅</a></td>
+    <td align="center"><a href="https://www.tiki-toki.com/timeline/entry/1753034/A-History-of-Research-Ethics/"><img src="https://avatars.githubusercontent.com/u/64027166?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ismael-KG</b></sub></a><br /><a href="https://github.com/chrisdburr/turing-commons/pulls?q=is%3Apr+reviewed-by%3AIsmael-KG" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
