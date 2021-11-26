@@ -1,5 +1,7 @@
 # Reuse of Illustrations
 
+![Image of individuals represented by digital models](representation.png)
+
 All of the illustrations in this folder were commissioned for the purpose of the Turing Commons project and were illustrated by [Johnny Lighthands](https://www.johnnylighthands.co.uk).
 
 As with the rest of the content in this repository, you are free to copy and redistribute the material in any medium or format, as well as remix, transform, and build upon the material for any purpose, even commercially.
