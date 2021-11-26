@@ -5,7 +5,9 @@ numpy==1.19.0
 matplotlib==3.2.2
 datascience
 folium
+sphinx
 sphinx-click
 sphinx_inline_tabs
+sphinx-panels
 sphinxext-rediraffe~=0.2.3
 seaborn~=0.11.2
