@@ -1,8 +1,3 @@
-```{image} ../images/illustrations/RRI_cover.jpg
-:alt: Illustration by [Johnny Lighthands](https://www.johnnylighthands.co.uk))
-:align: center
-```
-
 # About this Guidebook
 
 Responsible scientific research and technological innovation (RRI) is a vital component of a flourishing and fair society.
@@ -14,6 +9,11 @@ Building on these commitments, this course will explore what it means to take (i
 
 The notion of ‘responsibility’ employed throughout this course will be grounded in an understanding of the moral relationship between science, technology, and society, exploring both historical and contemporary examples of RRI practices.
 As well as looking at the theoretical basis of RRI this course will also take a hands-on approach by exploring a variety of tools and procedures that can help operationalise and implement a robust notion of responsibility within research and innovation practices.
+
+```{image} ../images/illustrations/RRI_cover.jpg
+:alt: Illustration by [Johnny Lighthands](https://www.johnnylighthands.co.uk))
+:align: center
+```
 
 ## Who is this Guidebook For?
 
