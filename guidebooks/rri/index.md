@@ -1,4 +1,4 @@
-```{image} ../images/illustrations/algorithm2.png
+```{image} ../images/illustrations/RRI_cover.jpg
 :alt: Illustration by [Johnny Lighthands](https://www.johnnylighthands.co.uk))
 :align: center
 ```
