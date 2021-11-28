@@ -12,7 +12,6 @@ parts:
       - file: rri/chapter2/activity2-1
       - file: rri/chapter2/sts
       - file: rri/chapter2/timeline
-      - file: rri/chapter2/timeline-copy
       - file: rri/chapter2/activity2-2
     - file: rri/chapter3/index
       sections:
@@ -61,6 +60,9 @@ parts:
   - caption: AI Ethics and Governance
     chapters:
     - file: aeg/index
+  - caption: Glossary
+    chapters:
+    - file: glossary/index
   - caption: References
     chapters:
       - file: bibliography.md
