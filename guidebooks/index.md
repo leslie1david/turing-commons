@@ -16,7 +16,7 @@ This site is a living resource, however, which means the content is constantly b
 These guidebooks are themselves being updated and added to, so may be in different states of completeness and readiness. You can access them via the links below, or using the menu on the left.
 
 - [Responsible Research and Innovation (RRI)](rri/index.md)
-  - [Download PDF of Guidebook](_static/rriguidebook-v1-0-0.pdf)
+  - [Download PDF of Guidebook](https://turing-commons.netlify.app/pdfs/rriguidebook-v1-0-0.pdf)
 - [Public Engagement and Communication of Science (PCS)](pcs/index.md)
 - [AI Ethics & Governance (AEG)](aeg/index.md)
 - [Citizen's Guide to Data: Ethical, Social and Legal Issues](https://zenodo.org/record/5568861#.YWfmRS8w1hE)
@@ -47,3 +47,9 @@ If you'd like to get involved and help contribute to these resources, you can ei
     [Open a new issue](https://github.com/chrisdburr/turing-commons/issues/new)! (See our [Where to start: issues](#where-to-start-issues) section below.)
 - Just want to get in touch?
   - Contact the Project Lead of _The Turing Commons_ by email at [cburr@turing.ac.uk](mailto:cburr@turing.ac.uk).
+
+## Testing Functionality
+
+This is a test of the glossary and tooltip[s features.
+
+This should take you to the glossary: {term}`Term 1` 
