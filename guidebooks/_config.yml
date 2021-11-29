@@ -42,6 +42,7 @@ sphinx:
 sphinx:
   extra_extensions:
   - sphinx_panels
+  - 
 
 #Bibliography
 bibtex_bibfiles:
